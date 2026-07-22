@@ -1,167 +1,56 @@
-<!-- Fieldmark 마케팅 URL용 GitHub Pages 랜딩 페이지 -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fieldmark Home Inspection</title>
-    <meta
-      name="description"
-      content="Fieldmark is an offline-first inspection workflow app built for solo home inspectors."
-    >
+    <meta name="description" content="Fieldmark is an offline-first inspection workflow app for solo home inspectors.">
+    <title>Fieldmark — Inspection work, ready before you leave</title>
     <style>
-      :root {
-        color-scheme: light dark;
-        --bg: #0d1712;
-        --panel: #14231b;
-        --text: #f5f7f2;
-        --muted: #c8d1c3;
-        --accent: #a8c66c;
-        --line: rgba(245, 247, 242, 0.14);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(circle at 80% 10%, rgba(168, 198, 108, 0.18), transparent 32rem),
-          var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.5;
-      }
-
-      main {
-        width: min(960px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 72px 0;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--muted);
-        font-weight: 700;
-        letter-spacing: 0.02em;
-      }
-
-      .mark {
-        display: inline-grid;
-        width: 36px;
-        height: 36px;
-        place-items: center;
-        border-radius: 8px;
-        background: linear-gradient(145deg, #315640, #1d3527);
-        color: white;
-        font-size: 24px;
-      }
-
-      h1 {
-        max-width: 780px;
-        margin: 48px 0 18px;
-        font-size: clamp(44px, 8vw, 82px);
-        line-height: 0.98;
-        letter-spacing: -0.03em;
-      }
-
-      .accent {
-        color: var(--accent);
-      }
-
-      .lead {
-        max-width: 660px;
-        margin: 0 0 36px;
-        color: var(--muted);
-        font-size: clamp(18px, 2.6vw, 24px);
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        margin-top: 44px;
-      }
-
-      section {
-        min-height: 190px;
-        padding: 24px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: rgba(20, 35, 27, 0.78);
-      }
-
-      h2 {
-        margin: 0 0 12px;
-        font-size: 20px;
-      }
-
-      p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      a {
-        color: var(--accent);
-      }
-
-      footer {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 52px;
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      @media (max-width: 760px) {
-        main {
-          padding: 48px 0;
-        }
-
-        .grid {
-          grid-template-columns: 1fr;
-        }
-      }
+      :root { color-scheme: dark; --bg: #0d1712; --panel: #17211b; --text: #f4f7f1; --muted: #c3cfc0; --accent: #a8c66c; --accent-dark: #24361d; --line: rgba(244, 247, 241, .16); }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; min-width: 0; background: radial-gradient(circle at 82% 6%, rgba(168, 198, 108, .18), transparent 30rem), var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+      a { color: inherit; }
+      .shell { width: min(1080px, calc(100% - 40px)); min-width: 0; margin: 0 auto; padding: 24px 0 48px; }
+      header, main, .nav, .hero, .grid, .card, #support, #support > *, footer { min-width: 0; }
+      header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; color: var(--text); font-size: 19px; font-weight: 800; text-decoration: none; }
+      .mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(168, 198, 108, .5); border-radius: 10px; color: var(--accent); font-size: 21px; }
+      .nav { display: flex; flex-wrap: wrap; gap: 4px; }
+      .nav a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 12px; border-radius: 10px; color: var(--muted); font-size: 14px; font-weight: 700; text-decoration: none; }
+      .nav a:hover { color: var(--text); background: rgba(244, 247, 241, .09); }
+      .hero { max-width: 790px; padding: 92px 0 53px; }
+      .eyebrow { margin: 0 0 16px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(47px, 8vw, 84px); line-height: .98; letter-spacing: -.05em; }
+      h1 span { color: var(--accent); }
+      .lead { max-width: 650px; margin: 25px 0 0; color: var(--muted); font-size: clamp(18px, 2.5vw, 23px); }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+      .button { display: inline-flex; min-width: 0; max-width: 100%; min-height: 48px; align-items: center; justify-content: center; padding: 0 19px; border: 2px solid var(--accent); border-radius: 12px; background: var(--accent); color: #17211b; font-weight: 800; overflow-wrap: anywhere; text-align: center; text-decoration: none; }
+      .button:hover { background: #c0dc87; border-color: #c0dc87; }
+      .button.secondary { background: transparent; color: var(--accent); }
+      .button.secondary:hover { background: rgba(168, 198, 108, .12); }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card { min-height: 230px; padding: 25px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(34, 48, 39, .96), var(--panel)); }
+      .number { color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; }
+      .card h2 { margin: 28px 0 10px; font-size: 22px; letter-spacing: -.02em; }
+      .card p { margin: 0; color: var(--muted); }
+      #support { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 52px; padding: 28px; border: 1px solid rgba(168, 198, 108, .35); border-radius: 18px; background: var(--accent-dark); }
+      #support h2 { margin: 0; font-size: 26px; } #support p { margin: 6px 0 0; color: var(--muted); }
+      footer { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 43px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; } footer a { display: inline-flex; min-width: 0; max-width: 100%; min-height: 44px; align-items: center; color: var(--accent); font-weight: 700; overflow-wrap: anywhere; }
+      a:focus-visible { outline: 3px solid #e7f6ba; outline-offset: 3px; }
+      @media (max-width: 760px) { .shell { width: min(100% - 32px, 620px); } header { align-items: flex-start; flex-direction: column; gap: 8px; } .nav { width: 100%; } .hero { padding: 59px 0 38px; } .grid { grid-template-columns: 1fr; } #support { align-items: flex-start; flex-direction: column; } footer { align-items: flex-start; flex-direction: column; gap: 0; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
     </style>
   </head>
   <body>
-    <main>
-      <div class="brand"><span class="mark">·</span> Fieldmark</div>
-      <h1>Finish reports before <span class="accent">driving away.</span></h1>
-      <p class="lead">
-        Fieldmark is an offline-first inspection workflow app built for solo home inspectors.
-        Capture defects, attach photo evidence, reuse trusted comments, and check report
-        readiness while you are still on-site.
-      </p>
-
-      <div class="grid" aria-label="Fieldmark features">
-        <section>
-          <h2>Fast field capture</h2>
-          <p>Add defects with snippets, severity, notes, and photo evidence without turning the field workflow into office work.</p>
-        </section>
-        <section>
-          <h2>Offline-first</h2>
-          <p>Inspection data stays local on the device until you export or back it up.</p>
-        </section>
-        <section>
-          <h2>Report readiness</h2>
-          <p>Review missing photos, notes, and unfinished sections before leaving the property.</p>
-        </section>
-        <section>
-          <h2>Free and Pro</h2>
-          <p>Start with 3 inspections for free. Upgrade to Pro for unlimited inspections, unlimited exports, custom snippets, and JSON backup.</p>
-        </section>
-      </div>
-
-      <footer>
-        <span>Contact: <a href="mailto:furly.help.master@gmail.com">furly.help.master@gmail.com</a></span>
-        <span><a href="support.html">Support</a></span>
-        <span><a href="privacy.html">Privacy Policy</a></span>
-      </footer>
-    </main>
+    <div class="shell">
+      <header><a class="brand" href="index.html" aria-label="Fieldmark home"><span class="mark" aria-hidden="true">⌁</span>Fieldmark</a><nav class="nav" aria-label="Primary navigation"><a href="#support">Support</a><a href="privacy.html">Privacy Policy</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a></nav></header>
+      <main>
+        <section class="hero" aria-labelledby="page-title"><p class="eyebrow">Inspection workflow for the field</p><h1 id="page-title">Finish reports before <span>driving away.</span></h1><p class="lead">Fieldmark helps solo home inspectors capture the evidence, review the details, and leave the property knowing their report is ready to finish.</p><div class="actions"><a class="button" href="#support">Get support</a><a class="button secondary" href="privacy.html">Privacy Policy</a></div></section>
+        <section class="grid" aria-label="How Fieldmark supports inspection work"><article class="card"><div class="number">01 / OFFLINE-FIRST</div><h2>Keep working in the field.</h2><p>Record inspection details on the device, even when a connection is not part of the job.</p></article><article class="card"><div class="number">02 / PHOTO EVIDENCE</div><h2>Make each finding clear.</h2><p>Attach photos to inspection sections and defects while the evidence is in front of you.</p></article><article class="card"><div class="number">03 / REPORT READINESS</div><h2>Leave with fewer loose ends.</h2><p>Review missing photos, notes, and unfinished sections before you drive away.</p></article></section>
+        <section id="support" aria-labelledby="support-title"><div><h2 id="support-title">Need a hand in the field?</h2><p>Email Fieldmark support with your question and app details.</p></div><a class="button" href="mailto:fieldmark.help@gmail.com">fieldmark.help@gmail.com</a></section>
+      </main>
+      <footer><span>Fieldmark support</span><a href="mailto:fieldmark.help@gmail.com">fieldmark.help@gmail.com</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a></footer>
+    </div>
   </body>
 </html>
